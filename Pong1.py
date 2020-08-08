@@ -1,6 +1,7 @@
 import turtle
 #turtle for graphics, open windows, etc
 
+#wn=window
 wn = turtle.Screen()
 wn.title ("Pong by @KMcCarthy")
 wn.bgcolor("black")
@@ -33,6 +34,38 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
+
+#Functions
+def paddle_a_up():
+    y = paddle_a.ycor()
+    y += 20
+    paddle_a.sety(y)
+
+def paddle_a_down():
+    y = paddle_a.ycor()
+    y -= 20
+    paddle_a.sety(y)
+
+def paddle_b_up():
+    y = paddle_b.ycor()
+    y += 20
+    paddle_b.sety(y)
+
+def paddle_b_down():
+    y = paddle_b.ycor()
+    y -= 20
+    paddle_b.sety(y)
+
+
+#Keyboard binding
+#onkeypress wasn't working so went with onkey, seems to be working fine
+wn.listen()
+wn.onkey(paddle_a_up, "w")
+wn.onkey(paddle_a_down, "s")
+wn.onkey(paddle_b_up, "Up")
+wn.onkey(paddle_b_down, "Down")
+
+
 
 #Main game loop
 
