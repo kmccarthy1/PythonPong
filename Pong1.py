@@ -41,8 +41,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = 2 #d as in delta, 2px
-ball.dy = -2
+ball.dx = 3 #d as in delta, 2px
+ball.dy = -3
 
 #Pen
 pen = turtle.Turtle()
